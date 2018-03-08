@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapHelperKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4F4-Pr-Ktx">
+                                <rect key="frame" x="50" y="40" width="275" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6xm-e7-227"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Map"/>
+                                    <segment title="Directions"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="h5P-q1-7IR"/>
+                                </connections>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="B2y-Fj-AiG">
+                                <rect key="frame" x="50" y="100" width="275" height="140"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Address 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54I-Qo-0pm">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="sgq-dO-30p"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="VMC-iD-8h9"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Address 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2da-Wn-p3q">
+                                        <rect key="frame" x="0.0" y="80" width="275" height="60"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="FYz-12-WqZ"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SLb-hQ-TOs">
+                                <rect key="frame" x="117" y="492" width="141" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7m-il-65b">
+                                        <rect key="frame" x="0.0" y="0.0" width="141" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="1eW-wh-u1q"/>
+                                        </constraints>
+                                        <state key="normal" title="Show In Map"/>
+                                        <connections>
+                                            <action selector="showInMapClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W9D-Al-WNH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nU-8N-9ay">
+                                        <rect key="frame" x="0.0" y="45" width="141" height="35"/>
+                                        <state key="normal" title="Show In Google Map"/>
+                                        <connections>
+                                            <action selector="showInGoogleMapClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8wV-Z7-llk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQQ-Gm-MuX">
+                                        <rect key="frame" x="0.0" y="90" width="141" height="35"/>
+                                        <state key="normal" title="Show In Apple Map"/>
+                                        <connections>
+                                            <action selector="showInAppleMapClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G8Z-JH-LeL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="B2y-Fj-AiG" firstAttribute="trailing" secondItem="4F4-Pr-Ktx" secondAttribute="trailing" id="5fn-OG-1Yo"/>
+                            <constraint firstItem="4F4-Pr-Ktx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Fho-Rn-ZBN"/>
+                            <constraint firstItem="B2y-Fj-AiG" firstAttribute="leading" secondItem="4F4-Pr-Ktx" secondAttribute="leading" id="V1G-z6-yEZ"/>
+                            <constraint firstItem="SLb-hQ-TOs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WKG-1k-KGo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4F4-Pr-Ktx" secondAttribute="trailing" constant="50" id="fQy-G0-8tX"/>
+                            <constraint firstItem="4F4-Pr-Ktx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="kRX-vi-SvL"/>
+                            <constraint firstItem="B2y-Fj-AiG" firstAttribute="top" secondItem="4F4-Pr-Ktx" secondAttribute="bottom" constant="30" id="wae-p4-IMW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SLb-hQ-TOs" secondAttribute="bottom" constant="50" id="zWJ-ov-Qh6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="segmentControl" destination="4F4-Pr-Ktx" id="fYy-Bv-zhZ"/>
+                        <outlet property="textField1" destination="54I-Qo-0pm" id="NGh-Ba-pDe"/>
+                        <outlet property="textField2" destination="2da-Wn-p3q" id="91R-gB-MK9"/>
+                        <outlet property="textFieldStackView" destination="B2y-Fj-AiG" id="gTL-1s-bqf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94" y="101"/>
+        </scene>
+    </scenes>
+</document>

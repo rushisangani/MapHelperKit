@@ -24,11 +24,17 @@ MapHelperKit provides an elegant way to show locations or directions in Google M
 ```ruby
 pod 'MapHelperKit'
 or
-pod 'MapHelperKit', '~> 1.0'
+pod 'MapHelperKit', '~> 1.1'
 ```
 
 ## Usage
 
+**Note:** - To open Google Maps from iOS App please include following in your info.plist
+```swift
+<array>
+    <string>comgooglemaps</string>
+</array>
+```
 ### Show Place In Map
 
 ```swift

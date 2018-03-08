@@ -29,23 +29,23 @@ import UIKit
 
     // MARK: - Properties
     
-    public var source: String = ""
-    public var destination: String = ""
+    @objc public var source: String = ""
+    @objc public var destination: String = ""
     
     /// MapType: - default is '.default' which asks user to select map if 'Google Maps' is installed.
-    public var mapType: MapType = .default
+    @objc public var mapType: MapType = .default
     
     /// DirectionMode mode: - default is Driving
-    public var directionMode: DirectionMode = .driving
+    @objc public var directionMode: DirectionMode = .driving
     
     // MARK: - Initialize
     
-    public init(source: String, destination: String) {
+    @objc public init(source: String, destination: String) {
         self.source = source
         self.destination = destination
     }
     
-    public convenience init(destination: String) {
+    @objc public convenience init(destination: String) {
         self.init(source: "", destination: destination)
     }
     

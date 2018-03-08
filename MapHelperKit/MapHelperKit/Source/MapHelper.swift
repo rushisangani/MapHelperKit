@@ -29,35 +29,35 @@ import UIKit
     
     // MARK: - Properties
     
-    public var placeName: String = ""
-    public var latitude: String = ""
-    public var longitude: String = ""
+    @objc public var placeName: String = ""
+    @objc public var latitude: String = ""
+    @objc public var longitude: String = ""
     
     /// MapType: - default is '.default' which asks user to select map if 'Google Maps' is installed.
-    public var mapType: MapType = .default
+    @objc public var mapType: MapType = .default
     
     /// MapView mode: - default is Standard
-    public var mapViewMode: MapViewMode = .standard
+    @objc public var mapViewMode: MapViewMode = .standard
     
     /// zoom level for map: - default is 14
-    public var zoomLevel: Int = defaultZoomLevel
+    @objc public var zoomLevel: Int = defaultZoomLevel
     
     /// convert coordinates to address: - default is false (for faster response)
-    public var convertCoordinatesToAddress: Bool = false
+    @objc public var convertCoordinatesToAddress: Bool = false
 
     // MARK: - Initialize
     
-    public init(placeName: String, latitude: String, longitude: String) {
+    @objc public init(placeName: String, latitude: String, longitude: String) {
         self.placeName = placeName
         self.latitude = latitude
         self.longitude = longitude
     }
     
-    public convenience init(placeName: String) {
+    @objc public convenience init(placeName: String) {
         self.init(placeName: placeName, latitude: "", longitude: "")
     }
     
-    public convenience init(latitude: String, longitude: String) {
+    @objc public convenience init(latitude: String, longitude: String) {
         self.init(placeName: "", latitude: latitude, longitude: longitude)
     }
     

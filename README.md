@@ -1,15 +1,15 @@
 # MapHelperKit
 MapHelperKit provides an elegant way to show locations or directions in Google Maps or Apple Maps.
 
+![Alt text](/Images/image1.png?raw=true "Google Map")
+![Alt text](/Images/image2.png?raw=true "Apple Map")
+
 ## Features
 
 - Easiest way to show locations or directions in map.
 - MapHelperKit opens Apple Maps automatically, if Google Map is not installed on the device.
 - Default mode asks user to show address in Google Map or Apple Map.
 - Show directions with different direction mode.
-
-![Alt text](/Images/image1.png?raw=true "Google Map")
-![Alt text](/Images/image2.png?raw=true "Apple Map")
 
 ## Requirements
 

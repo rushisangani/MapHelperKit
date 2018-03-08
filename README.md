@@ -1,6 +1,7 @@
 # MapHelperKit
 MapHelperKit provides an elegant way to show locations or directions in Google Maps or Apple Maps.
 
+![Alt text](/Images/video.gif?raw=true "Video")
 ![Alt text](/Images/image1.png?raw=true "Google Map")
 ![Alt text](/Images/image2.png?raw=true "Apple Map")
 

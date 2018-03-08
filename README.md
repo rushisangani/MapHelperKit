@@ -47,7 +47,7 @@ mapHelper.zoomLevel = 10             // Default is 14
 
 - Provide Map Type
 ```swift
-mapHelper.mapType = .googleMap      // Default is '.default', let's ask user to select maps to open
+mapHelper.mapType = .googleMap      // Default is '.default', let's ask user to select map to open
 ```
 
 ### Show Directions In Map

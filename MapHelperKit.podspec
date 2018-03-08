@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "MapHelperKit"
-s.version      = "1.1"
+s.version      = "1.2"
 s.summary      = "MapHelperKit provides an elegant way to show locations or directions in Google Maps or Apple Maps."
 s.description  = <<-DESC
 MapHelperKit provides easiest way to show different places in Maps. It also provides directions API to show in Apple Maps or Google Maps.

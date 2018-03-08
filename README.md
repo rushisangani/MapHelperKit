@@ -25,7 +25,7 @@ MapHelperKit provides an elegant way to show locations or directions in Google M
 ```ruby
 pod 'MapHelperKit'
 or
-pod 'MapHelperKit', '~> 1.1'
+pod 'MapHelperKit', '~> 1.2'
 ```
 
 ## Usage

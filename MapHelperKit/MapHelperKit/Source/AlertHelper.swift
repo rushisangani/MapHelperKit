@@ -59,7 +59,12 @@ class AlertHelper {
         alertController.addAction(appleMapAction)
         alertController.addAction(cancelAction)
         
-        // show
+        // show as popover in iPad
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.sourceView = rootViewController.view
+            popoverController.sourceRect = CGRect(x: rootViewController.view.bounds.midX, y: rootViewController.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+        }
         rootViewController.present(alertController, animated: true, completion: nil)
     }
     

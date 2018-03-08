@@ -31,6 +31,7 @@ pod 'MapHelperKit', '~> 1.1'
 
 **Note:** - To open Google Maps from iOS App please include following in your info.plist
 ```swift
+<key>LSApplicationQueriesSchemes</key>
 <array>
     <string>comgooglemaps</string>
 </array>
